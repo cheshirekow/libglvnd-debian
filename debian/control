@@ -12,7 +12,7 @@ Package: libglvnd-dev
 Section: libdevel
 Architecture: any
 Depends: libglvnd1 (= ${binary:Version}), ${misc:Depends}
-Description: the GL Vendor-Neutral Dispatch library
+Description: GL Vendor-Neutral Dispatch library
  libglvnd is a vendor-neutral dispatch layer for arbitrating OpenGL API calls
  between multiple vendors. It allows multiple drivers from different vendors to
  coexist on the same filesystem, and determines which vendor to dispatch each
@@ -25,7 +25,7 @@ Description: the GL Vendor-Neutral Dispatch library
 Package: libglvnd1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libxext, libx11
-Description: the GL Vendor-Neutral Dispatch library
+Description: GL Vendor-Neutral Dispatch library
  libglvnd is a vendor-neutral dispatch layer for arbitrating OpenGL API calls
  between multiple vendors. It allows multiple drivers from different vendors to
  coexist on the same filesystem, and determines which vendor to dispatch each
