@@ -96,7 +96,7 @@ License: BSD-1-clause
 
 Files: debian/*
 Copyright: 2013 Timo Aaltonen <tjaalton@ubuntu.com>
-Copyright: 2018 Josh Bialkowski <josh.bialkowski@gmail.com>
+           2018 Josh Bialkowski <josh.bialkowski@gmail.com>
 License: MIT
 
 License: MIT

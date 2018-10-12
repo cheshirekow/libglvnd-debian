@@ -1,3 +1,9 @@
+libglvnd (1.1.0-2) xenial; urgency=medium
+
+  * Fix libg1.symbols which was copied from 1.0.0
+
+ -- Josh Bialkowski <josh.bialkowski@gmail.com>  Thu, 09 Aug 2018 11:04:55 -0700
+
 libglvnd (1.1.0-1) xenial; urgency=medium
 
   * Initial release 
