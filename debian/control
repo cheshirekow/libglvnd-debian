@@ -1,0 +1,36 @@
+Source: libglvnd
+Priority: optional
+Maintainer: Josh Bialkowski <josh.bialkowski@gmail.com>
+Build-Depends: debhelper (>=9), dh-autoreconf, libxext-dev, libx11-dev, x11proto-gl-dev
+Standards-Version: 3.9.6
+Section: libs
+Homepage: https://github.com/NVIDIA/libglvnd
+Vcs-Git: https://github.com/NVIDIA/libglvnd.git
+Vcs-Browser: https://github.com/NVIDIA/libglvnd
+
+Package: libglvnd-dev
+Section: libdevel
+Architecture: any
+Depends: libglvnd1 (= ${binary:Version}), ${misc:Depends}
+Description: the GL Vendor-Neutral Dispatch library
+ libglvnd is a vendor-neutral dispatch layer for arbitrating OpenGL API calls
+ between multiple vendors. It allows multiple drivers from different vendors to
+ coexist on the same filesystem, and determines which vendor to dispatch each
+ API call to at runtime.
+ .
+ Both GLX and EGL are supported, in any combination with OpenGL and OpenGL ES.
+ .
+ libglvnd was originally described in Andy Ritger's OpenGL ABI proposal [1].
+
+Package: libglvnd1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libxext, libx11
+Description: the GL Vendor-Neutral Dispatch library
+ libglvnd is a vendor-neutral dispatch layer for arbitrating OpenGL API calls
+ between multiple vendors. It allows multiple drivers from different vendors to
+ coexist on the same filesystem, and determines which vendor to dispatch each
+ API call to at runtime.
+ .
+ Both GLX and EGL are supported, in any combination with OpenGL and OpenGL ES.
+ .
+ libglvnd was originally described in Andy Ritger's OpenGL ABI proposal [1].
