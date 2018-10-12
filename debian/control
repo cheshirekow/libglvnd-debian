@@ -30,13 +30,13 @@ Depends:
  libopengl0 (= ${binary:Version}),
  ${misc:Depends},
 Breaks:
- libegl1-mesa-dev (<< 18.0.5-0ubuntu0~18.04),
- libgl1-mesa-dev (<< 18.0.5-0ubuntu0~18.04),
- libgles2-mesa-dev (<< 18.0.5-0ubuntu0~18.04),
+ libegl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
+ libgl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
+ libgles2-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
 Replaces:
- libegl1-mesa-dev (<< 18.0.5-0ubuntu0~18.04),
- libgl1-mesa-dev (<< 18.0.5-0ubuntu0~18.04),
- libgles2-mesa-dev (<< 18.0.5-0ubuntu0~18.04),
+ libegl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
+ libgl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
+ libgles2-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- development files
  This is an implementation of the vendor-neutral dispatch layer for
@@ -83,12 +83,11 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libglvnd0 (= ${binary:Version}),
- libegl-mesa0,
 Replaces:
- libegl1-mesa (<< 18.0.5-0ubuntu0~18.04),
+ libegl1-mesa (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Breaks:
- libegl1-mesa (<< 18.0.5-0ubuntu0~18.04),
+ libegl1-mesa (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- EGL support
@@ -105,9 +104,9 @@ Depends:
  ${misc:Depends},
  libglvnd0 (= ${binary:Version}),
 Replaces:
- libgles2-mesa (<< 18.0.5-0ubuntu0~18.04),
+ libgles2-mesa (<< 18.0.5-0ubuntu0~16.04.1),
 Breaks:
- libgles2-mesa (<< 18.0.5-0ubuntu0~18.04),
+ libgles2-mesa (<< 18.0.5-0ubuntu0~16.04.1),
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- GLES support
  This is an implementation of the vendor-neutral dispatch layer for
@@ -124,10 +123,10 @@ Depends:
  libglvnd0 (= ${binary:Version}),
  libglx0 (= ${binary:Version}),
 Replaces:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~18.04),
+ libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Breaks:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~18.04),
+ libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0),
  glx-diversions (<< 0.8),
 Multi-Arch: same
@@ -144,12 +143,11 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libglvnd0 (= ${binary:Version}),
- libglx-mesa0,
-Replaces:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~18.04),
+`Replaces:
+ libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Breaks:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~18.04),
+ libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- GLX support
