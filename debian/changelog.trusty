@@ -1,0 +1,25 @@
+libglvnd (1.1.0-4+trusty1) trusty; urgency=medium
+
+  * Add multiple distribution infrastructure
+  * Add dpkg-divert
+
+ -- Josh Bialkowski <josh.bialkowski@gmail.com>  Fri, 19 Aug 2018 11:47:05 -0700
+
+libglvnd (1.1.0-3) trusty; urgency=medium
+
+  * Fix references to ubuntu 18.04 -> 16.04 and remove -mesa0 depends from
+    debian control file
+
+ -- Josh Bialkowski <josh.bialkowski@gmail.com>  Fri, 19 Aug 2018 11:47:05 -0700
+
+libglvnd (1.1.0-2) trusty; urgency=medium
+
+  * Fix libg1.symbols which was copied from 1.0.0
+
+ -- Josh Bialkowski <josh.bialkowski@gmail.com>  Thu, 09 Aug 2018 11:04:55 -0700
+
+libglvnd (1.1.0-1) trusty; urgency=medium
+
+  * Initial release 
+
+ -- Josh Bialkowski <josh.bialkowski@gmail.com>  Wed, 08 Aug 2018 15:50:28 -0700

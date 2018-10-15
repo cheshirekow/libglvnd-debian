@@ -23,20 +23,12 @@ Architecture: any
 Depends:
  libglvnd0 (= ${binary:Version}),
  libglvnd-core-dev (= ${binary:Version}),
- libegl1 (= ${binary:Version}),
- libgles2 (= ${binary:Version}),
- libgl1 (= ${binary:Version}),
- libglx0 (= ${binary:Version}),
- libopengl0 (= ${binary:Version}),
+ libegl1-glvnd (= ${binary:Version}),
+ libgles2-glvnd (= ${binary:Version}),
+ libgl1-glvnd (= ${binary:Version}),
+ libglx0-glvnd (= ${binary:Version}),
+ libopengl0-glvnd (= ${binary:Version}),
  ${misc:Depends},
-Breaks:
- libegl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
- libgl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
- libgles2-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
-Replaces:
- libegl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
- libgl1-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
- libgles2-mesa-dev (<< 18.0.5-0ubuntu0~16.04.1),
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- development files
  This is an implementation of the vendor-neutral dispatch layer for
@@ -76,7 +68,7 @@ Description: Vendor neutral GL dispatch library
  .
  This package contains the GL dispatch library.
 
-Package: libegl1
+Package: libegl1-glvnd
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends},
 Depends:
@@ -84,10 +76,8 @@ Depends:
  ${misc:Depends},
  libglvnd0 (= ${binary:Version}),
 Replaces:
- libegl1-mesa (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Breaks:
- libegl1-mesa (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- EGL support
@@ -96,7 +86,7 @@ Description: Vendor neutral GL dispatch library -- EGL support
  .
  This package contains support for EGL.
 
-Package: libgles2
+Package: libgles2-glvnd
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends},
 Depends:
@@ -104,9 +94,9 @@ Depends:
  ${misc:Depends},
  libglvnd0 (= ${binary:Version}),
 Replaces:
- libgles2-mesa (<< 18.0.5-0ubuntu0~16.04.1),
+ libglvnd0 (<< 1.0.0)
 Breaks:
- libgles2-mesa (<< 18.0.5-0ubuntu0~16.04.1),
+ libglvnd0 (<< 1.0.0),
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- GLES support
  This is an implementation of the vendor-neutral dispatch layer for
@@ -114,19 +104,17 @@ Description: Vendor neutral GL dispatch library -- GLES support
  .
  This package contains support for GLES.
 
-Package: libgl1
+Package: libgl1-glvnd
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends},
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libglvnd0 (= ${binary:Version}),
- libglx0 (= ${binary:Version}),
+ libglx0-glvnd (= ${binary:Version}),
 Replaces:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Breaks:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0),
  glx-diversions (<< 0.8),
 Multi-Arch: same
@@ -136,18 +124,16 @@ Description: Vendor neutral GL dispatch library -- legacy GL support
  .
  This package contains support for old libGL for compatibility reasons.
 
-Package: libglx0
+Package: libglx0-glvnd
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends},
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libglvnd0 (= ${binary:Version}),
-`Replaces:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
+Replaces:
  libglvnd0 (<< 1.0.0)
 Breaks:
- libgl1-mesa-glx (<< 18.0.5-0ubuntu0~16.04.1),
  libglvnd0 (<< 1.0.0)
 Multi-Arch: same
 Description: Vendor neutral GL dispatch library -- GLX support
@@ -156,7 +142,7 @@ Description: Vendor neutral GL dispatch library -- GLX support
  .
  This package contains support for GLX.
 
-Package: libopengl0
+Package: libopengl0-glvnd
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends},
 Depends:

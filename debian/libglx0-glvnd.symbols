@@ -1,4 +1,4 @@
-libGLX.so.0 libglx0 #MINVER#
+libGLX.so.0 libglx0-glvnd #MINVER#
  __GLXGL_CORE_FUNCTIONS@Base 0
  __glXGLLoadGLXFunction@Base 0
  glXChooseFBConfig@Base 0

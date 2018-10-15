@@ -1,0 +1,36 @@
+#!/bin/bash
+
+declare -a diversions=(
+  "/usr/lib/x86_64-linux-gnu/libEGL.so.1"
+  "/usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0"
+)
+
+diversion_added_version=1.1.0-4
+this_version=1.1.0-4
+
+losing_diversion=n
+
+if test "$1" = failed-upgrade
+then
+        dpkg --compare-versions "$2" le-nl "$this_version" ||
+        # An upgrade from a newer version failed.
+        # There is no way for us to know enough to take over from here,
+        # so abort the upgrade.
+        exit 1
+elif dpkg --compare-versions "$2" lt-nl "$diversion_added_version"
+then
+        losing_diversion=y
+fi
+
+case "$1,$losing_diversion" in
+remove,*|abort-install,*|disappear,*|*,y)
+        for diversion in "${diversions[@]}"
+        do
+          dpkg-divert --package libglvnd --remove --rename \
+            --divert ${diversion}.old ${diversion}
+        done
+        ;;
+esac
+
+#DEBHELPER#
+exit 0

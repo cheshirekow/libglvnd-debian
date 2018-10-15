@@ -1,3 +1,10 @@
+libglvnd (1.1.0-4+xenial1) xenial; urgency=medium
+
+  * Add multiple distribution infrastructure
+  * Add dpkg-divert
+
+ -- Josh Bialkowski <josh.bialkowski@gmail.com>  Fri, 19 Aug 2018 11:47:05 -0700
+
 libglvnd (1.1.0-3) xenial; urgency=medium
 
   * Fix references to ubuntu 18.04 -> 16.04 and remove -mesa0 depends from

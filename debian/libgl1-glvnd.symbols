@@ -1,4 +1,4 @@
-libGL.so.1 libgl1 #MINVER#
+libGL.so.1 libgl1-glvnd #MINVER#
  glAccum@Base 0
  glAccumxOES@Base 0
  glAcquireKeyedMutexWin32EXT@Base 0

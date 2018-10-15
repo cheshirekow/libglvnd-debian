@@ -1,4 +1,4 @@
-libOpenGL.so.0 libopengl0 #MINVER#
+libOpenGL.so.0 libopengl0-glvnd #MINVER#
  glAccum@Base 0
  glActiveShaderProgram@Base 0
  glActiveTexture@Base 0

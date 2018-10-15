@@ -1,4 +1,4 @@
-libGLESv2.so.2 libgles2 #MINVER#
+libGLESv2.so.2 libgles2-glvnd #MINVER#
  glActiveShaderProgram@Base 1.0.0
  glActiveTexture@Base 0
  glAttachShader@Base 0
